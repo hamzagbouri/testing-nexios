@@ -6,14 +6,22 @@
     <title>Nexio - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        .font-josefin {
-            font-family: 'Josefin Sans', sans-serif;
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Loti:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        primary: ['"Josefin Sans"', 'sans-serif'],
+                        secondary: ['"Loti"', 'sans-serif'],
+                    },
+                },
+            },
         }
-    </style>
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
-<body class="font-josefin">
+<body class="font-primary">
     <!-- Header with Navigation -->
     <header class="">
         <div class="flex justify-between items-center bg-violet-500 py-2 px-24">
