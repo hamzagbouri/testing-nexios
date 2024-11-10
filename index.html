@@ -104,7 +104,7 @@
   <section class="flex flex-col md:flex-row justify-center bg-[#F6F5FF] h-auto md:h-[80vh] mb-4 p-4 md:gap-[250px]">
     <div class="mt-8 md:ml-[200px] md:mt-[150px] w-full md:w-80 flex flex-col gap-4 text-center md:text-left">
         <!-- Texte du header -->
-        <p class="text-[#FB2E86] text-xs">Best Electronic Shop you will See...</p>
+        <p class="text-[#FB2E86] text-xs ">Best Electronic Shop you will See...</p>
         <h1 class="font-josefin text-2xl md:text-3xl font-bold">
             Discover Our new high quality Products
         </h1>
@@ -131,15 +131,12 @@
         <h1 class="text-[#1A0B5B] font-josefin font-semibold text-2xl">Our categories </h1>
     </div>
     <!-- div englobe les images a gouche   et text et images a droit  -->
-     <div class="flex gap-[10px]">
+     <div class="flex gap-[10px] md:flex-row gap-4 md:gap-[10px] mx-4">
         <!-- les images -->
-     <div class=" w-[714px] h-[684px] ml-[60px]">
-       
-        
-        <img src="img/home/grpImage.png" alt="grpImage" >
-        
-        
-     </div>
+        <div class="hidden md:block w-full md:w-[714px] h-[684px] ml-0 md:ml-[60px]">
+            <img src="img/home/grpImage.png" alt="grpImage">
+        </div>
+
     <!-- le text -->
      <div class=" w-[714px] h-[684px] bg-[#8b5f6ad] ">
     <div class="flex gap-4">
@@ -152,25 +149,25 @@
     </p>
     <div class="grid grid-cols-2 gap-4">
         <div class="flex bg-[#F2F0FF]">
-       <img src="img/home/smartphone.png" alt="smartphone">
+       <img src="img/home/smartphone.png" alt="smartphone" class=" sm:w-1/2 md:w-1/2">
        <div class="flex items-center">
        <h4 class="text-[#1A0B5B] font-Loti">Smartphone</h4>
     </div>
         </div>
         <div class="flex bg-[#F2F0FF]">
-            <img src="img/home/electromenage.png" alt="smartphone">
+            <img src="img/home/electromenage.png" alt="smartphone" class=" sm:w-1/2 md:w-1/2">
             <div class="flex items-center">
             <h4 class="text-[#1A0B5B] font-Loti">électroménagers</h4>
          </div>
              </div>
              <div class="flex bg-[#F2F0FF]">
-                <img src="img/home/tv.png" alt="smartphone">
+                <img src="img/home/tv.png" alt="smartphone" class=" sm:w-1/2 md:w-1/2">
                 <div class="flex items-center">
                 <h4 class="text-[#1A0B5B] font-Loti">Smart TV</h4>
              </div>
                  </div>
                  <div class="flex bg-[#F2F0FF]">
-                    <img src="img/home/laptope.png" alt="smartphone">
+                    <img src="img/home/laptope.png" alt="smartphone" class=" sm:w-1/2 md:w-1/2">
                     <div class="flex items-center">
                     <h4 class="text-[#1A0B5B] font-Loti">Laptops</h4>
                  </div>
@@ -189,7 +186,7 @@
         <h1 class="text-[#1A0B5B] font-josefin font-semibold text-2xl">Leatest Products </h1>
     </div>
     <div class="flex justify-center">
-        <div class=" grid grid-cols-3 gap-4">
+        <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mx-4">
           <div>
             <img src="img/home/phone.png" alt="phone" >
             <div class="flex justify-between">
@@ -247,6 +244,45 @@
     </div>
  </section>
 
+
+
+ <!-- section what we offre -->
+  <section class="mt-8">
+    <div class=" flex justify-center">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
+                        <div class=" flex flex-col  items-center bg-[#8b5cf6ad] shadow-md w-[200px]">
+                            <img src="img/home/transpoort.png" alt="transpoort" >
+                            <h3>24/7 Support</h3>
+                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                        </div>
+
+                        <div class=" flex flex-col items-center bg-[#8b5cf6ad] shadow-md w-[200px]">
+                            <img src="img/home/argent.png" alt="transpoort" >
+                            <h3>24/7 Support</h3>
+                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                        </div>
+
+                        <div class=" flex flex-col items-center bg-[#8b5cf6ad] shadow-md w-[200px]">
+                            <img src="img/home/premiem.png" alt="transpoort" >
+                            <h3>24/7 Support</h3>
+                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                        </div>
+
+                        <div class=" flex flex-col items-center bg-[#8b5cf6ad] shadow-md w-[200px]">
+                            <img src="img/home/support.png" alt="transpoort" >
+                            <h3>24/7 Support</h3>
+                            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.</p>
+                        </div>
+
+                        
+                </div>
+</div>
+  </section>
+
+
+
+
+
 <!-- Fin de mon code -->
 
 
@@ -296,7 +332,7 @@
         <div class="bg-[#E7E4F8] flex justify-center items-center h-12">
             <p class="text-[#9DA0AE]">CodeBenders - All Rights Reserved</p>
             <div>
-                <img src="Group 205.png" alt="">
+                <img src="Group 205.png" alt="grp">
             </div>
         </div>
     </footer>
