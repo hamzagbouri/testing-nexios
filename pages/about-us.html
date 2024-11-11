@@ -30,6 +30,26 @@
             100% { transform: translateX(-100%); } 
         }
 
+        @media (max-width : 768px){
+        
+            @keyframes startscroll {
+            0% { transform: translateX(-20%); }
+            100% { transform: translateX(-100%); } 
+
+            
+
+        }
+        #carousel img{
+             width: 70px;
+        }
+
+        }
+        @media (max-width : 768px){
+            #carousel img{
+             width: 60px;
+        }
+        }
+
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
@@ -190,11 +210,11 @@
     <section>
         <h2 class="text-center my-20 font-bold text-4xl text-[#151875]">Our Partners</h2>
         <div id="carousel" class="flex justify-evenly items-center gap-6">
-            <img src="/img/about/google.png" alt="googleLogo" class="w-24 sm:w-22">
-            <img src="/img/about/amazon.png" alt="amazonLogo" class="w-24 sm:w-22">
-            <img src="/img/about/paypal.png" alt="paypalLogo" class="w-24 sm:w-22">
-            <img src="/img/about/spotify.png" alt="spotifylogo" class="w-24 sm:w-22">
-            <img src="/img/about/firefox.png" alt="firefoxlogo" class="w-24 sm:w-22">
+            <img src="/img/about/google.png" alt="googleLogo" class="w-24 md:w-22 sm:16">
+            <img src="/img/about/amazon.png" alt="amazonLogo" class="w-24 md:w-22 sm:16">
+            <img src="/img/about/paypal.png" alt="paypalLogo" class="w-24 md:w-22 sm:16">
+            <img src="/img/about/spotify.png" alt="spotifylogo" class="w-24 md:w-22 sm:16">
+            <img src="/img/about/firefox.png" alt="firefoxlogo" class="w-24 md:w-22 sm:16">
         </div>
     </section>
 
