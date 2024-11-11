@@ -42,7 +42,7 @@
             <!-- menu for large screen -->
             <ul class="hidden lg:flex gap-9 pt-1">
                 <li><a href="index.html" class="hover:underline">Home</a></li>
-                <li><a href="pages/store.html" class="hover:underline">Store</a></li>
+                <li><a href="store.html" class="hover:underline">Store</a></li>
                 <li><a href="pages/about-us.html" class="hover:underline">About us</a></li>
                 <li><a href="pages/contact-us.html" class="hover:underline">Contact</a></li>
             </ul>
@@ -62,7 +62,7 @@
         <div id="mobile-menu" class="md:hidden bg-[#8b5cf6ad] text-white p-4 h-screen flex justify-center hidden items-center absolute w-full">
             <ul class="flex flex-col gap-8 text-2xl text-center ">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="pages/store.html">Store</a></li>
+                <li><a href="store.html">Store</a></li>
                 <li><a hhref="pages/about-us.html">About us</a></li>
                 <li><a href="pages/contact-us.html">Contact</a></li>
             </ul>
@@ -79,7 +79,7 @@
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Your Cart</h2>
                 <div class="flex flex-col justify-between">
                     
-                <ul class="space-y-4">
+                <ul id="item-list" class="space-y-4">
                     <li class="flex justify-between text-sm text-gray-600">
                         <span>Item 1</span>
                         <span>$25.99</span>
@@ -116,98 +116,11 @@
 
   <!-- section 2: Product Details -->
         <section class="sec2  m-14 md:m-28 flex items-center justify-center ">
-            <div class="flex gap-8 justify-center items-center flex-wrap  md:flex-nowrap	 w-4/5">
-                <div class="images flex gap-4 h-full w-full">
-                    <div class="images 1 flex flex-col gap-4 h-full">
-                        <img src="../img/customize/pc kbir1.png" alt="">
-                        <img src="../img/customize/pc kbir 2.png" alt="">
-                        <img src="../img/customize/pc kbir3.png" alt="">
+            <div id="product-detail" class="flex gap-8 justify-center items-center flex-wrap  md:flex-nowrap	 w-4/5">
+               
+                
+                  
 
-                    </div>
-                    <div class="image 2">
-                        <img class="md:h-full" src="../img/customize/pc kbir.png" alt="">
-                    </div>
-
-                </div>
-                <div class="content flex justify-center flex-col gap-2">
-                    <div class="flex flex-col gap-4">
-                        <h3 class="text-[#101750] font-bold text-3xl">Sony Pc - High Performance1</h3>
-                        <span class="flex items-center gap-2">
-                            <div>
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            </div>
-                            <p> (22)</p>
-                        </span>
-                        <div class="flex gap-8">
-                            <p class="text-[#151875]">$32.00</p>
-                            <p class="line-through text-[#FB2E86]">$32.00</p>
-                        </div>
-                    </div>
-                    <div class=" flex flex-col gap-2">
-                        <p class="text-[#A9ACC6]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
-                        <div class="text-[#151875] flex gap-4">
-                            <p>Color: </p>
-                            <div class="flex gap-2">
-                                <img src="../img/customize/Ellipse 63.png" alt="">
-                                <img src="../img/customize/Ellipse 64.png" alt="">
-                                <img src="../img/customize/Ellipse 65.png" alt="">
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-4">
-                            <div class="flex gap-8">
-                                <select class="bg-[#EEE8E8] p-2 pr-4 rounded-xl " name="gpu" id="gpu" >
-                                    <option value="" class="text-[#848484]" disabled selected>Choose a GPU</option>
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                  </select>
-                                  <select class="bg-[#EEE8E8] p-2 pr-4 rounded-xl " name="gpu-serie" id="gpu-serie" >
-                                    <option value="" class="text-[#848484]" disabled selected>Choose a GPU Serie</option>
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                  </select>
-                                </div>
-                            <div class="flex gap-8">
-                                <select class="bg-[#EEE8E8] p-2 pr-4 rounded-xl " name="gpu" id="gpu" >
-                                    <option value="" class="text-[#848484]" disabled selected>Choose a GPU</option>
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                  </select>
-                                  <select class="bg-[#EEE8E8] p-2 pr-4 rounded-xl " name="gpu-serie" id="gpu-serie" >
-                                    <option value="" class="text-[#848484]" disabled selected>Choose a GPU Serie</option>
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                  </select>
-                                </div>
-                                <div class="flex gap-8">
-                                    <select class="bg-[#EEE8E8] p-2 pr-4 rounded-xl " name="memoire" id="memoire" >
-                                        <option value="" class="text-[#848484]" disabled selected>Choose a Memory</option>
-                                        <option value="volvo">Volvo</option>
-                                        <option value="saab">Saab</option>
-                                        <option value="opel">Opel</option>
-                                        <option value="audi">Audi</option>
-                                    </select>
-                                    </div>
-                        </div>
-                        <div class="flex gap-8">
-                            <p class="text-[#151875]">Categories : Laptops</p>
-                            <p class="text-[#151875]">Tags : Pc , Good Quality</p>
-                        </div>
-                        <p class="text-[#151875] cursor-pointer hover:underline">Add to Cart</p>
-                      
-                    </div>
-                </div>
             </div>
         
         </section>
@@ -296,7 +209,7 @@
                     <p class="text-sm ">$67.00</p>
 
                 </div>
-                <div class="cards w-4/5  md:w-1/5 ">
+                <div class="cards w-4/5   md:w-1/5 ">
                     <img src="../img/customize/Rectangle 130.png" alt="">
                     <div class="flex justify-between ">
                         <p class="text-2xs">Mouse</p>
@@ -331,7 +244,7 @@
 
 
         </section>
- <!-- section 4: Other Products-->
+ <!-- section 4:Fin Other Products-->
 
 
     <!-- footer -->
@@ -381,6 +294,8 @@
         </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/customize.js"></script>
+
 </body>
 </html>
 
@@ -477,50 +392,3 @@
 
 
 
-
-<!-- 
-<div class="images flex gap-4 h-full">
-    <div class="images 1 flex flex-col gap-4 h-full">
-        <img src="../img/customize/Rectangle 134.png" alt="">
-        <img src="../img/customize/Rectangle 136.png" alt="">
-        <img src="../img/customize/Rectangle 137.png" alt="">
-
-    </div>
-    <div class="image 2">
-        <img class="h-full" src="../img/customize/Rectangle 138.png" alt="">
-    </div>
-
-</div>
-<div class="content flex justify-center flex-col gap-4">
-    <div class="flex flex-col gap-4">
-        <h3 class="text-[#101750] font-bold text-3xl">Dell Latitude - 2021</h3>
-        <span class="flex items-center gap-2">
-            <div>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-            </div>
-            <p> (22)</p>
-        </span>
-        <div class="flex gap-8">
-            <p class="text-[#151875]">$32.00</p>
-            <p class="line-through text-[#FB2E86]">$32.00</p>
-        </div>
-    </div>
-    <div class="text-[#151875] flex flex-col gap-4">
-        <p class="text-[#A9ACC6]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
-        <div class="flex gap-4">
-            <p>Color: </p>
-            <div class="flex gap-2">
-                <img src="../img/customize/Ellipse 63.png" alt="">
-                <img src="../img/customize/Ellipse 64.png" alt="">
-                <img src="../img/customize/Ellipse 65.png" alt="">
-            </div>
-        </div>
-        <p class="cursor-pointer hover:underline">Add to Cart</p>
-        <p>Categories : Laptops</p>
-        <p>Tags : Pc , Good Quality</p>
-    </div>
-</div> -->
