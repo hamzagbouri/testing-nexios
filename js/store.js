@@ -17,17 +17,17 @@ connection.onreadystatechange = function () {
                 product_container.innerHTML = '';
                 paginate_item.forEach(item => {
                     product_container.innerHTML += `
-                    <div>
-                        <img class="w-full h-50" src="${item.imageUrl}" alt="Dell Laptop">
-                        <div class="flex justify-between items-center flex-wrap w-full space-y-3">
-                            <p class="text-2xl text-[#1A0B5B] w-1/2 ">${item.marque}</p>
-                            <p class="text-2xl text-[#1A0B5B] w-1/2 text-right">${item.price}.00$</p>
-                            <a href="#" class="w-1/2 text-[#1A0B5B] text-lg underline pl-4">Customize</a>
-                            <button type="button" class="w-1/4 text-lg p-2 mr-8 bg-[#1A0B5B] text-white hover:bg-[#150a42] focus:outline-none focus:ring-2 focus:ring-[#FB2E86] focus:ring-opacity-50">
-                                Add to cart
-                            </button>                    
-                        </div>
-                    </div>
+                    <div class="flex flex-col space-y-4">
+            <img class="w-full h-56 sm:h-64 md:h-72 object-cover" src="${item.imageUrl}" alt="Dell Laptop">
+            <div class="flex justify-between items-center flex-wrap w-full space-y-2">
+                <p class="text-xl text-[#1A0B5B] w-1/2 text-base">${item.marque}</p>
+                <p class="text-xl text-[#1A0B5B] w-1/2 text-right text-base">${item.price}.00$</p>
+                <a href="#" class="w-full sm:w-1/2 text-[#1A0B5B] text-sm underline">Customize</a>
+                <button type="button" class="w-full sm:w-1/4 text-lg p-2 bg-[#1A0B5B] text-white hover:bg-[#150a42] focus:outline-none focus:ring-2 focus:ring-[#FB2E86] focus:ring-opacity-50">
+                    Add to cart
+                </button>
+            </div>
+        </div>
                     `;
                 });
             }
