@@ -53,5 +53,3 @@ function closeCard(){
 }
 
 
-cartclose.addEventListener('click', () => {
-});

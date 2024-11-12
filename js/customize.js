@@ -195,6 +195,8 @@ connection.onreadystatechange = function () {
                     </div>
                 </div> 
                 `
+                document.getElementById("addToCartt").addEventListener("click", () => addToCart(pro))
+
                 document.getElementById('gpu').addEventListener('change',  showGPU)
                 document.getElementById('cpu').addEventListener('change', showCPU)
                 document.getElementById('cpu-serie').addEventListener('change', changeCpu)
@@ -600,12 +602,21 @@ function addToCart(pro){
     
         cartmenu.style.transform = "translateX(0)"
     
-        document.getElementById('cart-close').addEventListener("click", function(){
-              cartmenu.style.transform = "translateX(100%)"
-        })
+       
 
 
 }
+document.getElementById('cart-close').addEventListener("click", function(){
+    cartmenu.style.transform = "translateX(100%)"
+})
+document.getElementById("cart-toggle").addEventListener("click", function(){
+    const carrt = JSON.parse(localStorage.getItem('cart') )|| [];
+showOnCart(carrt)
+    cartmenu.style.transform = "translateX(0)"
+
+    
+})
+
 
 
 
