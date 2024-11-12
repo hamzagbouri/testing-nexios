@@ -20,34 +20,30 @@
     </script>
     <style>
 
-        #carousel{
-            animation: startscroll 15s linear infinite;
-            white-space: nowrap;
-        }
-
-        @keyframes startscroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-100%); } 
-        }
-
-        @media (max-width : 768px){
-        
-            @keyframes startscroll {
-            0% { transform: translateX(-20%); }
-            100% { transform: translateX(-100%); } 
-
+        #car1{
+            animation: scrolling 20s linear infinite;
             
+        }
+        #car2{
+            animation: scrolling 20s linear infinite;
+            
+        }
+        #car3{
+            animation: scrolling 20s linear infinite;
+            
+        }
+        #car4{
+            animation: scrolling 20s linear infinite;
+            
+        }
+        #car5{
+            animation: scrolling 20s linear infinite;
+            
+        }
 
-        }
-        #carousel img{
-             width: 70px;
-        }
-
-        }
-        @media (max-width : 768px){
-            #carousel img{
-             width: 60px;
-        }
+        @keyframes scrolling {
+            0% { transform: translateX(80vw); }
+            100% { transform: translateX(-180vw); } 
         }
 
     </style>
@@ -206,12 +202,12 @@
     <!-- Partners -->
     <section>
         <h2 class="text-center my-20 font-bold text-4xl text-[#151875]">Our Partners</h2>
-        <div id="carousel" class="flex justify-evenly items-center gap-6">
-            <img src="/img/about/google.png" alt="googleLogo" class="w-24 md:w-22 sm:16">
-            <img src="/img/about/amazon.png" alt="amazonLogo" class="w-24 md:w-22 sm:16">
-            <img src="/img/about/paypal.png" alt="paypalLogo" class="w-24 md:w-22 sm:16">
-            <img src="/img/about/spotify.png" alt="spotifylogo" class="w-24 md:w-22 sm:16">
-            <img src="/img/about/firefox.png" alt="firefoxlogo" class="w-24 md:w-22 sm:16">
+        <div class="flex justify-evenly items-center gap-6 overflow-hidden">
+            <img id="car1" src="/img/about/google.png" alt="googleLogo" class="w-24 md:w-22 sm:16">
+            <img id="car2" src="/img/about/amazon.png" alt="amazonLogo" class="w-24 md:w-22 sm:16">
+            <img id="car3" src="/img/about/paypal.png" alt="paypalLogo" class="w-24 md:w-22 sm:16">
+            <img id="car4" src="/img/about/spotify.png" alt="spotifylogo" class="w-24 md:w-22 sm:16">
+            <img id="car5" src="/img/about/firefox.png" alt="firefoxlogo" class="w-24 md:w-22 sm:16">
         </div>
     </section>
 
