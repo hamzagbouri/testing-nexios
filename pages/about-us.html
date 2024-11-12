@@ -63,12 +63,10 @@
     <!-- Header with Navigation -->
      
     <header class="">
-
-        <!-- Email and Phone Bar -->
-        <div class="flex justify-between items-center bg-violet-500 py-2 px-6 sm:px-12 md:px-24">
+        <div class="flex justify-between items-center bg-violet-500 px-4 md:py-2 md:px-24">
             <div class="flex items-center gap-4 text-white">
                 <i class="fa-regular fa-envelope text-2xl"></i>
-                <p class="text-lg md:text-base">NaxioAR@gmail.com</p>
+                <p class="text-lg md:text-base">NexioAR@gmail.com</p>
             </div>       
             <div class="flex items-center gap-4 text-white">
                 <i class="fa-solid fa-phone text-lg"></i>
@@ -76,66 +74,57 @@
             </div>  
         </div>
         
-        <!-- Main Navigation -->
-        <nav class="flex justify-between items-center px-6 sm:px-12 md:px-24 py-6">
+        <!-- main navigation -->
+        <nav class="flex justify-between items-center px-4 md:px-24 py-6">
             <a href="" class="text-3xl font-bold text-violet-500">Nexio</a>
-            
-            <!-- Menu for Large Screen -->
+            <!-- menu for large screen -->
             <ul class="hidden lg:flex gap-9 pt-1">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="../index.html" class="hover:underline">Home</a></li>
+                <li><a href="store.html" class="hover:underline">Store</a></li>
+                <li><a href="about-us.html" class="hover:underline">About us</a></li>
+                <li><a href="contact-us.html" class="hover:underline">Contact</a></li>
             </ul>
 
-            <!-- Cart Icon and Burger Button -->
-            <div class=" flex gap-7">
+            <!-- cart icon and burger btn -->
+            <div class=" flex gap-7 ">
                 <button id="cart-toggle" class="text-black focus:outline-none">
                     <i class="fa-solid fa-cart-shopping text-2xl"></i>
                 </button>
-                <button id="menu-toggle" class="text-black focus:outline-none lg:hidden">
+                <button id="menu-toggle" class="text-black focus:outline-none md:hidden">
                     <i class="fa fa-bars fa-2x"></i>
                 </button>
             </div>
         </nav>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden bg-[#8b5cf6ad] text-white p-4 h-screen flex justify-center items-center hidden absolute w-full">
+        <!-- mobile menu  -->
+        <div id="mobile-menu" class="md:hidden bg-[#8b5cf6ad] text-white p-4 h-screen flex justify-center hidden items-center absolute w-full">
             <ul class="flex flex-col gap-8 text-2xl text-center ">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="store.html">Store</a></li>
-                <li><a href="/pages/about-us.html">About us</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a hhref="pages/about-us.html">About us</a></li>
+                <li><a href="pages/contact-us.html">Contact</a></li>
             </ul>
         </div>
 
-        <!-- Cart Menu -->
+        <!-- cart menu -->
         <div id="cart-menu" class="fixed top-0 right-0 bg-white w-80 h-full z-50 transform translate-x-full transition-transform duration-300">
-            <div class="p-6">
+            <div class="p-6 h-screen">
                 <!-- Close Button -->
                 <button id="cart-close" class="absolute top-4 right-4 text-2xl text-gray-600">
                     <i class="fa-solid fa-times"></i>
                 </button>
                 
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Your Cart</h2>
-                <ul class="space-y-4">
-                    <li class="flex justify-between text-sm text-gray-600">
-                        <span>Item 1</span>
-                        <span>$25.99</span>
-                    </li>
-                    <li class="flex justify-between text-sm text-gray-600">
-                        <span>Item 2</span>
-                        <span>$15.49</span>
-                    </li>
-                    <li class="flex justify-between text-sm text-gray-600">
-                        <span>Item 3</span>
-                        <span>$12.99</span>
-                    </li>
+                <div class="flex flex-col justify-between">
+                    
+                <ul id="item-list" class="space-y-4">
+                  
                 </ul>
                 <div class="mt-6">
-                    <p class="font-semibold text-gray-800">Total: $54.47</p>
+                    <p id="total-p" class="font-semibold text-gray-800"></p>
                     <button class="mt-4 bg-violet-500 text-white px-4 py-2 rounded-md w-full">Checkout</button>
                 </div>
+            </div>
             </div>
         </div>
     </header>
@@ -293,7 +282,6 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
     <script src="../js/about.js"></script>
 </body>
 </html>
