@@ -23,10 +23,10 @@
 <body class="font-primary">
     <!-- Header with Navigation -->
     <header class="">
-        <div class="flex justify-between items-center bg-violet-500 py-2 px-24">
+        <div class="flex justify-between items-center bg-violet-500 px-4 md:py-2 md:px-24">
             <div class="flex items-center gap-4 text-white">
                 <i class="fa-regular fa-envelope text-2xl"></i>
-                <p class="text-lg md:text-base">NaxioAR@gmail.com</p>
+                <p class="text-lg md:text-base">NexioAR@gmail.com</p>
             </div>       
             <div class="flex items-center gap-4 text-white">
                 <i class="fa-solid fa-phone text-lg"></i>
@@ -35,29 +35,29 @@
         </div>
         
         <!-- main navigation -->
-        <nav class="flex justify-between items-center px-24 py-6">
+        <nav class="flex justify-between items-center px-4 md:px-24 py-6">
             <a href="" class="text-3xl font-bold text-violet-500">Nexio</a>
             <!-- menu for large screen -->
             <ul class="hidden lg:flex gap-9 pt-1">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="about-us.html">About us</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
+                <li><a href="../index.html" class="hover:underline">Home</a></li>
+                <li><a href="store.html" class="hover:underline">Store</a></li>
+                <li><a href="about-us.html" class="hover:underline">About us</a></li>
+                <li><a href="contact-us.html" class="hover:underline">Contact</a></li>
             </ul>
 
             <!-- cart icon and burger btn -->
-            <div class=" flex gap-7">
-                <button onclick="openCard()" id="cart-toggle" class="text-black focus:outline-none">
+            <div class=" flex gap-7 ">
+                <button id="cart-toggle" class="text-black focus:outline-none">
                     <i class="fa-solid fa-cart-shopping text-2xl"></i>
                 </button>
-                <button id="menu-toggle" class="text-black focus:outline-none lg:hidden">
+                <button id="menu-toggle" class="text-black focus:outline-none md:hidden">
                     <i class="fa fa-bars fa-2x"></i>
                 </button>
             </div>
         </nav>
 
         <!-- mobile menu  -->
-        <div id="mobile-menu" class="lg:hidden bg-[#8b5cf6ad] text-white p-4 h-screen flex justify-center items-center hidden absolute w-full">
+        <div id="mobile-menu" class="md:hidden bg-[#8b5cf6ad] text-white p-4 h-screen flex justify-center hidden items-center absolute w-full">
             <ul class="flex flex-col gap-8 text-2xl text-center ">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="store.html">Store</a></li>
@@ -68,20 +68,23 @@
 
         <!-- cart menu -->
         <div id="cart-menu" class="fixed top-0 right-0 bg-white w-80 h-full z-50 transform translate-x-full transition-transform duration-300">
-            <div class="p-6">
+            <div class="p-6 h-screen">
                 <!-- Close Button -->
-                <button onclick="closeCard()" id="cart-close" class="absolute top-4 right-4 text-2xl text-gray-600">
+                <button id="cart-close" class="absolute top-4 right-4 text-2xl text-gray-600">
                     <i class="fa-solid fa-times"></i>
                 </button>
                 
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Your Cart</h2>
-                <ul id="item-list" class="space-y-4">
+                <div class="flex flex-col justify-between">
                     
+                <ul id="item-list" class="space-y-4">
+                  
                 </ul>
                 <div class="mt-6">
                     <p id="total-p" class="font-semibold text-gray-800"></p>
                     <button class="mt-4 bg-violet-500 text-white px-4 py-2 rounded-md w-full">Checkout</button>
                 </div>
+            </div>
             </div>
         </div>
     </header>
@@ -105,7 +108,7 @@
 
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl p-5 lg:p-10 mx-auto">
-    <div class="pt-10 lg:pt-36 text-center lg:text-left flex flex-col items-center lg:items-start">
+    <div class="pt-10 lg:pt-36 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
       <h1 class="font-josefin text-3xl font-bold lg:text-5xl text-black mb-4 lg:mb-2">Stay in Touch!</h1>
       <p class="text-lg lg:text-2xl text-black mb-5 leading-relaxed font-lato pt-3">
         If you have any questions, feedback, or inquiries, please feel free to reach out to us. We'd love to hear from you and will respond as soon as possible.
@@ -136,8 +139,8 @@
   <div class="contact-container text-center max-w-lg w-full mx-auto py-10 flex flex-col items-center">
     <h1 class="text-4xl text-black mb-1 font-josefin-sans font-bold">Contact Us</h1>
     <p class="text-[#FB2E86] text-base mb-6 font-lato">Let's Connect!</p>
-    <form class="contact-form w-full flex flex-col gap-4 pt-8">
-        <div class="name-fields flex flex-col sm:flex-row gap-4">
+    <form class="contact-form w-3/4 flex flex-col gap-4 pt-8 md:w-full ">
+        <div class="name-fields flex flex-col sm:flex-row gap-4 ">
             <input type="text" placeholder="Type your first name" required class="w-full p-4 border-none rounded-full bg-[#EDEBEB] text-base text-[000000] font-lato">
             <input type="text" placeholder="Type your last name" required class="w-full p-4 border-none rounded-full bg-[#EDEBEB] text-base text-[000000] font-lato">
         </div>
