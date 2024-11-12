@@ -128,9 +128,10 @@
                         <span>$12.99</span>
                     </li>
                 </ul>
-                <div class="mt-6">
-                    <p class="font-semibold text-gray-800">Total: $54.47</p>
+                <p class="font-semibold text-gray-800 pt-6">Total: $54.47</p>
+                <div class="flex gap-4">
                     <button id="Checkout-btn" class="mt-4 bg-violet-500 text-white px-4 py-2 rounded-md w-full">Checkout</button>
+                    <button id="validation-btn" class="mt-4 bg-violet-500 text-white px-4 py-2 rounded-md w-full">Valid</button>
                 </div>
             </div>
         </div>
@@ -310,7 +311,7 @@
         </div>
 
         <div class="flex flex-row justify-around items-center">
-            <input class="py-2 px-8 mt-5 bg-violet-500 rounded-xl text-white cursor-pointer" type="button" value="Print">
+            <input class="py-2 px-8 mt-5 bg-violet-500 rounded-xl text-white cursor-pointer" onclick="window.print()" type="button" value="Print">
             <input class="py-2 px-5 mt-5 bg-violet-500 rounded-xl text-white cursor-pointer" type="button" value="Checkout">
         </div>
     </div>
