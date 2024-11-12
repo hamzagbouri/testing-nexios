@@ -39,7 +39,7 @@ connection.onreadystatechange = function () {
             
            
             pagination(1);
-            const totalPages = Math.ceil(data.products.length / limit);
+            const totalPages = Math.ceil(35 / limit);
             console.log('Total Pages:', totalPages);
             const paginationContainer = document.getElementById('pagination-buttons');
             for (let i = 1; i <= totalPages; i++) {
