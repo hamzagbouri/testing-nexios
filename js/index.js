@@ -110,4 +110,46 @@ function closeCard(){
 
 }
 
+function animation() {
+    const slidesContainer = document.querySelector('#slider-conatiner'); // Fixed typo
+    const slides = document.querySelectorAll('.slider');
+  
+    if (!slidesContainer || slides.length === 0) {
+      console.error("Le conteneur des slides ou les slides n'ont pas été trouvés.");
+      return; 
+    }
+  
+    let slideWidth = slides[0].offsetWidth;
+    let currentIndex = 0;
+    function startSlider() {
+      gsap.to(slidesContainer, {
+        x: `-${slideWidth * currentIndex}px`, // Décalage de chaque slide
+        duration: 1,                          // Durée de l'animation
+        ease: 'power2.inOut',                  // Ease pour une transition fluide
+        onComplete: () => {                    // Une fois l'animation terminée
+          currentIndex++;                      // Passe à l'image suivante
+          if (currentIndex >= slides.length) { // Si fin de la liste des images
+            currentIndex = 0;                  // Reviens au début
+          }
+          setTimeout(startSlider, 3000);       // Attendre 3s avant la prochaine
+        }
+      });
+    }
+  
+    
+    function updateSlideWidth() {
+      slideWidth = slides[0].offsetWidth; 
+    }
+  
 
+    setTimeout(startSlider, 3000);
+  
+
+    window.addEventListener('resize', () => {
+      updateSlideWidth();
+    });
+  }
+  
+
+  document.addEventListener('DOMContentLoaded', animation);
+  
