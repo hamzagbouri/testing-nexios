@@ -1,3 +1,51 @@
+let modal = document.getElementById("modal");
+let checkoutBtn = document.getElementById("Checkout-btn");
+let modalCloseBtn = document.getElementById("modalCloseBtn");
+let validationButton = document.getElementById("validation-btn");
+function showCheckout(){
+    closeCard()
+    const panier = JSON.parse(localStorage.getItem("cart"))
+    document.getElementById('table').innerHTML=`
+    <tr class="border-2">
+                <th class="border-2 px-16">Product/Service</th>
+                <th class="border-2 px-16">Quantity</th> 
+                <th class="border-2 px-16">Unit Price</th>
+                <th class="border-2 px-16">Subtotal</th>
+            </tr>
+    `
+    console.log(panier)
+    panier.forEach(item => {
+        const tr = document.createElement('tr')
+        tr.className = "border-2"
+    
+        tr.innerHTML=`
+          <th class="border-2 px-16">${item.name}</th>
+                        <th class="border-2 ">${item.Bquantity}</th> 
+                        <th class="border-2 ">${item.price}</th>
+                        <th class="border-2 ">Subtotal</th>
+        `
+        document.getElementById('table').appendChild(tr)
+    })
+   modal.style.display="flex"
+    cartmenu.classList.add('translate-x-full');
+
+}
+checkoutBtn.addEventListener("click",showCheckout)
+modalCloseBtn.addEventListener("click" , function(){
+   modal.style.display="none"
+})
+
+
+validationButton.addEventListener("click" , function(){
+
+    isConfirme = confirm("Valid your cart !");
+
+    if(isConfirme){
+        cartmenu.style.transform = "translateX(100%)"
+        showCheckout();
+    }
+})
+
 const id = localStorage.getItem('id')
 const productDetail = document.getElementById('product-detail')
 console.log(id)
