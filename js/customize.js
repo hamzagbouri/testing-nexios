@@ -554,7 +554,6 @@ function showOnCart(cart){
     document.getElementById("total-p").innerText = total + ".00$" 
 }
 function updateQuantity(id, element){
-    console.log(element)
     const carrt = JSON.parse(localStorage.getItem('cart') )|| [];
     for(let i =0; i< carrt.length;i++){
         if (carrt[i].id == id){
