@@ -102,7 +102,7 @@ const limit = 12;
 const maxProductId = 34;
 
 function customizeItem(id) {
-    localStorage.setItem("id", id);
+    localStorage.setItem("id", JSON.stringify(id));
     window.location.href = "./customize.html";
 }
 

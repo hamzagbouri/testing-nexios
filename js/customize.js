@@ -3,7 +3,7 @@ let checkoutBtn = document.getElementById("Checkout-btn");
 let modalCloseBtn = document.getElementById("modalCloseBtn");
 let validationButton = document.getElementById("validation-btn");
 function showCheckout(){
-    closeCard()
+    document.getElementById("cart-menu").style.transform = "translateX(100%)"
     const panier = JSON.parse(localStorage.getItem("cart"))
     document.getElementById('table').innerHTML=`
     <tr class="border-2">
@@ -27,7 +27,7 @@ function showCheckout(){
         document.getElementById('table').appendChild(tr)
     })
    modal.style.display="flex"
-    cartmenu.classList.add('translate-x-full');
+   document.getElementById("cart-menu").classList.add('translate-x-full');
 
 }
 checkoutBtn.addEventListener("click",showCheckout)
@@ -41,14 +41,17 @@ validationButton.addEventListener("click" , function(){
     isConfirme = confirm("Valid your cart !");
 
     if(isConfirme){
-        cartmenu.style.transform = "translateX(100%)"
+        document.getElementById("cart-menu").style.transform = "translateX(100%)"
         showCheckout();
     }
 })
+// star code
 
-const id = localStorage.getItem('id')
+const id = JSON.parse(localStorage.getItem('id'))
+console.log(typeof id);
+
 const productDetail = document.getElementById('product-detail')
-console.log(id)
+
 let firstTime = true;
 
 let connection = new XMLHttpRequest();
@@ -647,19 +650,19 @@ function addToCart(pro){
     localStorage.setItem("cart", JSON.stringify(carrt))
 
     
-        cartmenu.style.transform = "translateX(0)"
+        document.getElementById("cart-menu").style.transform = "translateX(0)"
     
        
 
 
 }
 document.getElementById('cart-close').addEventListener("click", function(){
-    cartmenu.style.transform = "translateX(100%)"
+    document.getElementById("cart-menu").style.transform = "translateX(100%)"
 })
 document.getElementById("cart-toggle").addEventListener("click", function(){
     const carrt = JSON.parse(localStorage.getItem('cart') )|| [];
 showOnCart(carrt)
-    cartmenu.style.transform = "translateX(0)"
+document.getElementById("cart-menu").style.transform = "translateX(0)"
 
     
 })
