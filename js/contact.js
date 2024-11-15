@@ -155,15 +155,15 @@ form.lastname.addEventListener('change', function() {
 });
 
 const validName = function(inputName) {
-  let nameRegExp = /^[a-zA-ZÀ-ÿ\s-]{5,12}$/;
+  let nameRegExp = /^[a-zA-ZÀ-ÿ\s-]{3,12}$/;
   let small = inputName.nextElementSibling;
   
   if (nameRegExp.test(inputName.value)) {
-    small.innerHTML = 'Nom Valide';
+    small.innerHTML = 'name Valide';
     small.classList.remove('text-red-500');
     small.classList.add('text-green-500');
   } else {
-    small.innerHTML = 'Nom Non Valide';
+    small.innerHTML = 'Name is Valide';
     small.classList.remove('text-green-500');
     small.classList.add('text-red-500');
   }
@@ -183,7 +183,7 @@ const validMessage = function(inputMessage) {
     small.classList.remove('text-red-500');
     small.classList.add('text-green-500');
   } else {
-    small.innerHTML = 'Message trop court (min. 10 caractères)';
+    small.innerHTML = 'messsage is too short';
     small.classList.remove('text-green-500');
     small.classList.add('text-red-500');
   }
@@ -199,18 +199,18 @@ form.tel.addEventListener('change', function() {
 
 const validTel = function(inputTel) {
   // Définition de l'expression régulière pour le format de téléphone
-  let telRegExp = /^\+?[0-9\s.-]{10,15}$/;
+  let telRegExp =  /^\d{10}$/;
 
   // Sélection de l'élément <small> suivant pour afficher le message
   let small = inputTel.nextElementSibling;
   
   // Teste l'expression régulière
   if (telRegExp.test(inputTel.value)) {
-    small.innerHTML = 'Numéro Valide';
+    small.innerHTML = 'number Valide';
     small.classList.remove('text-red-500');
     small.classList.add('text-green-500');
   } else {
-    small.innerHTML = 'Numéro Non Valide (10-15 chiffres, peut inclure +, espaces, - ou .)';
+    small.innerHTML = 'Number is not Valide';
     small.classList.remove('text-green-500');
     small.classList.add('text-red-500');
   }
