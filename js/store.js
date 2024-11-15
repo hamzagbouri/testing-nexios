@@ -46,7 +46,7 @@ validationButton.addEventListener("click" , function(){
         showCheckout();
     }
 })
-//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 
 const menutoggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -210,8 +210,29 @@ function showOnCart(cart){
                         <span>${item.price * item.Bquantity}.00$ </span>`
         document.getElementById('item-list').appendChild(li)
         total += item.price * item.Bquantity
-    })
-    document.getElementById("total-p").innerText = total + ".00$" 
+    });
+    document.getElementById("total-p").innerText = total + ".00$"; 
+    document.getElementById("Total-tax").innerHTML=`<li class="font-bold ml-5">Total Amount, TAX:</li>`
+    const taxTotalList = document.createElement('div');
+
+const totalBeforeTaxes = document.createElement('li');
+totalBeforeTaxes.classList.add('ml-10', 'font-secondary');
+totalBeforeTaxes.innerHTML = `Total Before Taxes: ${total}.00$`;
+
+const taxAmount = document.createElement('li');
+taxAmount.classList.add('ml-10', 'font-secondary')
+taxAmount.innerHTML = `TAX: ${(total / 5)}$`;
+
+const totalAfterTaxes = document.createElement('li');
+totalAfterTaxes.classList.add('ml-10', 'font-secondary')
+totalAfterTaxes.innerHTML = `Total After Taxes: ${(total - (total / 5 ))}$`;
+
+taxTotalList.appendChild(totalBeforeTaxes);
+taxTotalList.appendChild(taxAmount);
+taxTotalList.appendChild(totalAfterTaxes);
+
+document.getElementById("Total-tax").appendChild(taxTotalList);
+
 }
 function updateQuantity(id, element){
     console.log(element)
