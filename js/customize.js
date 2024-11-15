@@ -27,7 +27,7 @@ function showCheckout(){
         document.getElementById('table').appendChild(tr)
     })
    modal.style.display="flex"
-    cartmenu.classList.add('translate-x-full');
+   document.getElementById('cart-menu').classList.add('translate-x-full');
 
 }
 checkoutBtn.addEventListener("click",showCheckout)
@@ -41,7 +41,7 @@ validationButton.addEventListener("click" , function(){
     isConfirme = confirm("Valid your cart !");
 
     if(isConfirme){
-        cartmenu.style.transform = "translateX(100%)"
+        document.getElementById('cart-menu').style.transform = "translateX(100%)"
         showCheckout();
     }
 })
@@ -648,19 +648,19 @@ function addToCart(pro){
     localStorage.setItem("cart", JSON.stringify(carrt))
 
     
-        cartmenu.style.transform = "translateX(0)"
+        document.getElementById('cart-menu').style.transform = "translateX(0)"
     
        
 
 
 }
 document.getElementById('cart-close').addEventListener("click", function(){
-    cartmenu.style.transform = "translateX(100%)"
+    document.getElementById('cart-menu').style.transform = "translateX(100%)"
 })
 document.getElementById("cart-toggle").addEventListener("click", function(){
     const carrt = JSON.parse(localStorage.getItem('cart') )|| [];
 showOnCart(carrt)
-    cartmenu.style.transform = "translateX(0)"
+    document.getElementById('cart-menu').style.transform = "translateX(0)"
 
     
 })
